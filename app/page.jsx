@@ -7,55 +7,57 @@ import Footer from "../components/Footer";
 import Testimonials from '../components/Testimonials';
 import Button from '../components/Button';
 
-{/* <Button text="Click Me" onClick={() => alert('Button clicked!')} /> */ }
-
-
-
-{/* <Testimonials /> */}
-
 const HomePage = () => {
-    return (
-        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 font-sans">
-            {/* Navbar */}
+  return (
+    <div className="flex flex-col min-h-screen font-sans" style={{
+      backgroundImage: "url('/images/13.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
+
+     
 
 
-            <Testimonials />
+      {/* Hero Section */}
+      <main
+        className="flex flex-1 flex-col items-center justify-center text-center px-8 py-32 relative"
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-            {/* Main Section */}
-            <main className="flex flex-1 flex-col items-center justify-center px-8 py-16 text-center">
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    Welcome to My App
-                </h1>
-                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl">
-                    This is a beautifully structured Home Page built with Next.js, React,
-                    and TailwindCSS.
-                </p>
-                <Image
-                    src="/next.svg"
-                    alt="Next.js Logo"
-                    width={120}
-                    height={40}
-                    className="dark:invert"
-                    priority
-                />
+        {/* Content */}
+        <div className="relative z-10 max-w-3xl text-white">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+            Hi, I'm Mohamed Abdo
+          </h1>
+          <p className="relative z-10 max-w-3xl text-white mb-8 text-lg md:text-xl">
+            I'm a Backend Developer & Web Designer building modern and responsive web applications.
+          </p>
 
-                {/* Routing Buttons */}
-                <div className="flex gap-4 mt-8">
-                    <Button text="About Us" onClick={() => window.location.href = '/about'} />
-                    <Button text="Contact" onClick={() => window.location.href = '/contact'} />
-                </div>
+          {/* Buttons */}
 
-                {/* Testimonials Section */}
-                
-
-
-               
-            </main>
-
-            {/* Footer */}
-
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button text="About Me" onClick={() => window.location.href = '/about'} />
+            {/* <Button text="My Services" onClick={() => window.location.href = '/services'} /> */}
+            <Button text="Contact Me" onClick={() => window.location.href = '/contact'} />
+          </div>
         </div>
-    );
+
+        {/* Profile Image */}
+        {/* <Testimonials /> */}
+        
+      </main>
+
+      {/* Testimonials Section */}
+      {/* <section className="bg-gray-100 dark:bg-gray-900 py-16">
+        <Testimonials />
+      </section> */}
+
+      {/* Footer */}
+
+    </div>
+  );
 };
 
 export default HomePage;

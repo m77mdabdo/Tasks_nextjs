@@ -19,4 +19,5 @@ export default function TestimonialsSlider() {
       <Button text="Next" onClick={next} />
     </div>
   );
+  
 }
